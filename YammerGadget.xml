@@ -134,7 +134,7 @@
           // The response.oauthError and response.oauthErrorText values may help debug
           // problems with your gadget.
           var main = document.getElementById('main');
-          var err = document.createTextNode('OAuth error: ' + response.errors + response.data + response.text);
+          var err = document.createTextNode('a OAuth ERROR: ' + response.errors + response.data + response.text);
        //     response.oauthError + ': ' + response.oauthErrorText);
           main.appendChild(err);
           showOneSection('main'); 
