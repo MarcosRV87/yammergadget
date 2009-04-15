@@ -5,9 +5,9 @@
     <Require feature="locked-domain"/> 
     <OAuth>
       <Service name="yammer">
-        <Access url="https://www.google.com/accounts/OAuthGetAccessToken" method="GET" /> 
-        <Request url="https://www.google.com/accounts/OAuthGetRequestToken?scope=http://www.google.com/m8/feeds/" method="GET" /> 
-        <Authorization url="https://www.google.com/accounts/OAuthAuthorizeToken?oauth_callback=http://oauth.gmodules.com/gadgets/oauthcallback" /> 
+        <Access url="https://www.yammer.com/oauth/access_token" method="GET" /> 
+        <Request url="https://www.yammer.com/oauth/request_token" method="GET" /> 
+        <Authorization url="https://www.yammer.com/oauth/authorize" /> 
       </Service>
     </OAuth>
   </ModulePrefs>
@@ -15,7 +15,7 @@
   <![CDATA[ 
  
   <!-- shindig oauth popup handling code -->
-  <script src="http://gadget-doc-examples.googlecode.com/svn/trunk/opensocial-gadgets/popup.js"></script>
+  <script src="popup.js"></script>
 
   <style>
   #main {
@@ -97,10 +97,10 @@
     // gadget as a link that the user clicks to begin the approval process.     
     function fetchData() {
       var params = {};
-      url = "http://www.google.com/m8/feeds/contacts/default/base?alt=json";
-      params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
+      url = "https://www.yammer.com/api/v1/messages.xml";
+      params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.XML;
       params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH;
-      params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "google";
+      params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "yammer";
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
       params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
