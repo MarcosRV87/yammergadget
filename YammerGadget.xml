@@ -105,6 +105,7 @@
       params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
       gadgets.io.makeRequest(url, function (response) { 
+	  	alert('here');
         if (response.oauthApprovalUrl) {
           // Create the popup handler. The onOpen function is called when the user
           // opens the popup window. The onClose function is called when the popup
