@@ -102,7 +102,7 @@
       params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH;
       params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "yammer";
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
-      params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.POST;
+      params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
 
       gadgets.io.makeRequest(url, function (response) { 
         if (response.oauthApprovalUrl) {
