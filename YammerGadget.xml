@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <Module>
-  <ModulePrefs title="OAuth Contacts" scrolling="true">
+  <ModulePrefs title="Yammer" scrolling="true">
     <Require feature="opensocial-0.8" />
     <Require feature="locked-domain"/> 
     <OAuth>
-      <Service name="google">
+      <Service name="yammer">
         <Access url="https://www.google.com/accounts/OAuthGetAccessToken" method="GET" /> 
         <Request url="https://www.google.com/accounts/OAuthGetRequestToken?scope=http://www.google.com/m8/feeds/" method="GET" /> 
         <Authorization url="https://www.google.com/accounts/OAuthAuthorizeToken?oauth_callback=http://oauth.gmodules.com/gadgets/oauthcallback" /> 
