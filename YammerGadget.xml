@@ -98,7 +98,7 @@
     function fetchData() {
 	alert('here');
       var params = {};
-      url = "https://www.yammer.com/api/v1/messages.json";
+      url = "https://www.yammer.com/api/v1/messages.xml";
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
       params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH;
       params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "yammer";
