@@ -96,6 +96,7 @@
     // URL that includes a Google-supplied request token. This is presented in the 
     // gadget as a link that the user clicks to begin the approval process.     
     function fetchData() {
+	alert('here');
       var params = {};
       url = "https://www.yammer.com/api/v1/messages.json";
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
