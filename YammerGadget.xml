@@ -6,7 +6,7 @@
     <OAuth>
       <Service name="yammer">
         <Access url="https://www.yammer.com/oauth/access_token" method="GET" /> 
-        <Request url="https://www.yammer.com/oauth/request_token" method="GET" /> 
+        <Request url="https://www.yammer.com/oauth/request_token" method="POST" /> 
         <Authorization url="https://www.yammer.com/oauth/authorize" /> 
       </Service>
     </OAuth>
@@ -97,12 +97,12 @@
     // gadget as a link that the user clicks to begin the approval process.     
     function fetchData() {
       var params = {};
-      url = "https://www.yammer.com/api/v1/messages.xml";
+      url = "https://www.yammer.com/api/v1/messages.json";
       params[gadgets.io.RequestParameters.CONTENT_TYPE] = gadgets.io.ContentType.JSON;
       params[gadgets.io.RequestParameters.AUTHORIZATION] = gadgets.io.AuthorizationType.OAUTH;
       params[gadgets.io.RequestParameters.OAUTH_SERVICE_NAME] = "yammer";
       params[gadgets.io.RequestParameters.OAUTH_USE_TOKEN] = "always";
-      params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.GET;
+      params[gadgets.io.RequestParameters.METHOD] = gadgets.io.MethodType.POST;
 
       gadgets.io.makeRequest(url, function (response) { 
         if (response.oauthApprovalUrl) {
