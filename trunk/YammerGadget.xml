@@ -5,7 +5,7 @@
     <Require feature="locked-domain"/> 
     <OAuth>
       <Service name="yammer">
-        <Access url="https://www.yammer.com/oauth/access_token" method="GET" /> 
+        <Access url="https://www.yammer.com/oauth/access_token" method="POST" /> 
         <Request url="https://www.yammer.com/oauth/request_token" method="POST" /> 
         <Authorization url="https://www.yammer.com/oauth/authorize" /> 
       </Service>
