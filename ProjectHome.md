@@ -1,0 +1,1 @@
+An Open Social Gadget for Yammer
